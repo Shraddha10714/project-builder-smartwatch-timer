@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .container {
     border: 1px solid black;
     height: 100vh;
@@ -12,7 +11,7 @@
     display: flex;
 }
 
-.black {
+.left {
     width: 50vw;
     background: #21292f;
     display: flex;
@@ -22,7 +21,7 @@
     font-size: xx-large;
 }
 
-.white {
+.right {
     width: 50vw;
     display: flex;
     justify-content: center;
@@ -51,13 +50,17 @@
     z-index: -1;
 }
 
-#t {
+#timeS {
     align-self: flex-start;
     position: absolute;
     font-size: x-large;
 }
 
-.time {
+:is(#timeS:hover, .icons>img) {
+    cursor: pointer;
+}
+
+.timeB {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,6 +89,11 @@
 
 .icons img:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
     opacity: 0.5;
+    transition: .5s ease;
+}
+
+.icons img:hover {
+    opacity: 1 !important;
 }
 
 .sms {
@@ -170,9 +178,6 @@ audio::-webkit-media-controls-enclosure {
     margin: 2vh;
 }
 
-
-/* TIMER */
-
 .timer {
     height: 95%;
     width: 100%;
@@ -211,4 +216,8 @@ audio::-webkit-media-controls-enclosure {
 
 .controls i:nth-child(3):hover {
     color: indianred;
+}
+
+.controls i:nth-child(1):hover {
+    transform: rotate(180deg);
 }
