@@ -2,6 +2,7 @@ function _(id) {
   return document.querySelector(id);
 }
 // Time
+
 setInterval(() => {
   let today = new Date();
   let day = [
